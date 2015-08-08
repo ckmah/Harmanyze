@@ -18,8 +18,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.harman.hkwirelessapi.*;
+
+
 public class HarmonyzeMain extends Activity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks, HKWirelessListener {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -103,6 +106,36 @@ public class HarmonyzeMain extends Activity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDeviceStateUpdated(long l, int i) {
+
+    }
+
+    @Override
+    public void onPlaybackStateChanged(int i) {
+
+    }
+
+    @Override
+    public void onVolumeLevelChanged(long l, int i, int i1) {
+
+    }
+
+    @Override
+    public void onPlayEnded() {
+
+    }
+
+    @Override
+    public void onPlaybackTimeChanged(int i) {
+
+    }
+
+    @Override
+    public void onErrorOccurred(int i, String s) {
+
     }
 
     /**
